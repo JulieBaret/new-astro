@@ -1,10 +1,30 @@
 ---
 import { Image } from 'astro:assets';
 import workplace from '../assets/workplace_base.png';
+import plant_background from '../assets/pot_bg.png';
+import plant_foreground from '../assets/pot_fg.png';
+import leave_1 from '../assets/leave_1.png';
+import leave_2 from '../assets/leave_2.png';
+import leave_3 from '../assets/leave_3.png';
+import leave_4 from '../assets/leave_4.png';
 ---
 
-<div>
-    <Image src={workplace} alt="Cosy workplace" id="workplace" />
+<div class="relative overflow-visible">
+    <Image class="max-h-[80dvh] w-auto" src={workplace} alt="Cosy workplace" id="workplace" />
+    <Image
+        class="absolute bottom-[3%] -left-[2%] z-10 w-[35%]"
+        src={plant_background}
+        alt="plant"
+    />
+    <Image class="absolute bottom-[3%] -left-[2%] z-10 w-[35%]" src={leave_1} alt="plant" />
+    <Image class="absolute bottom-[3%] -left-[2%] z-10 w-[35%]" src={leave_2} alt="plant" />
+    <Image class="absolute bottom-[3%] -left-[2%] z-10 w-[35%]" src={leave_3} alt="plant" />
+    <Image class="absolute bottom-[3%] -left-[2%] z-10 w-[35%]" src={leave_4} alt="plant" />
+    <Image
+        class="absolute bottom-[3%] -left-[2%] z-10 w-[35%]"
+        src={plant_foreground}
+        alt="plant"
+    />
 </div>
 
 <style>
