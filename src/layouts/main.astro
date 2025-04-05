@@ -1,6 +1,8 @@
 ---
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
+import '@fontsource-variable/plus-jakarta-sans';
+
 interface Props {
     title: string;
 }
@@ -19,7 +21,7 @@ const { title } = Astro.props;
         <title>{title}</title>
     </head>
     <body class="place-items-center content-center">
-        <Header style="grid-area: header" />
+        <!-- <Header style="grid-area: header" /> -->
         <slot style="grid-area: body" />
         <Footer styme="grid-area: footer" />
     </body>
@@ -38,5 +40,6 @@ const { title } = Astro.props;
         grid-template-areas: 'header' 'body' 'footer';
         min-height: 100dvh;
         padding: 1rem;
+        font-family: 'Plus Jakarta Sans Variable', sans-serif;
     }
 </style>
