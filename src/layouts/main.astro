@@ -1,16 +1,42 @@
 ---
-import '../styles/global.css';
-const { content } = Astro.props;
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+interface Props {
+    title: string;
+}
+
+const { title } = Astro.props;
 ---
 
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<title>{content.title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Astro description" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+    </head>
+    <body class="place-items-center content-center">
+        <Header style="grid-area: header" />
+        <slot style="grid-area: body" />
+        <Footer styme="grid-area: footer" />
+    </body>
 </html>
+<style is:global>
+    :root {
+    }
+    html {
+        font-family: system-ui, sans-serif;
+        background: #f4f1f9;
+    }
+    body {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas: 'header' 'body' 'footer';
+        min-height: 100dvh;
+        padding: 1rem;
+    }
+</style>

@@ -1,0 +1,25 @@
+---
+import { Image } from 'astro:assets';
+import workplace from '../assets/workplace_base.png';
+---
+
+<div>
+    <Image src={workplace} alt="Cosy workplace" id="workplace" />
+</div>
+
+<style>
+    #workplace {
+        object-fit: cover;
+        border-radius: 230% 170% 160% 123% / 100% 100% 70% 50%;
+        /* animation: wobble 5s ease-in-out alternate infinite; */
+    }
+
+    @keyframes wobble {
+        0% {
+            border-radius: 230% 170% 160% 123% / 100% 100% 70% 50%;
+        }
+        100% {
+            border-radius: 230% 160% 80% 50% / 100% 100% 50% 30%;
+        }
+    }
+</style>

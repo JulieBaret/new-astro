@@ -1,0 +1,20 @@
+---
+const navList = ["home", "projects", "education", "digital garden", "video game"];
+---
+
+<nav>
+    <ul class="flex space-x-1">
+        {
+            navList.map((el) => (
+                <li>
+                    <a href={`#${el}`}>{el}</a>
+                </li>
+            ))
+        }
+    </ul>
+</nav>
+<style>
+    ul li:not(:last-child)::after {
+        content: " ·";
+    }
+</style>
