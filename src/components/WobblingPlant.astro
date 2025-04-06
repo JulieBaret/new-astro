@@ -1,0 +1,86 @@
+---
+import { Picture } from 'astro:assets';
+import plant_bg from '../assets/cosy_workplace/plant_bg.png';
+import plant_fg from '../assets/cosy_workplace/plant_fg.png';
+import leaf_1 from '../assets/cosy_workplace/leaf_1.png';
+import leaf_2 from '../assets/cosy_workplace/leaf_2.png';
+import leaf_3 from '../assets/cosy_workplace/leaf_3.png';
+import leaf_4 from '../assets/cosy_workplace/leaf_4.png';
+
+const sharedClass = 'absolute bottom-0 left-0 w-[35%]';
+---
+
+<div class="relative">
+    <Picture class={sharedClass} src={plant_bg} alt="plant pot" />
+    <Picture class={sharedClass} src={leaf_1} alt="plant leaf" id="leaf_1" />
+    <Picture class={sharedClass} src={leaf_2} alt="plant leaf" id="leaf_2" />
+    <Picture class={sharedClass} src={leaf_3} alt="plant leaf" id="leaf_3" />
+    <Picture class={sharedClass} src={leaf_4} alt="plant leaf" id="leaf_4" />
+    <Picture class={sharedClass} src={plant_fg} alt="plant pot" />
+</div>
+
+<style>
+    #leaf_1 {
+        animation: rotateNeg2 2s infinite ease-in-out;
+    }
+
+    #leaf_2 {
+        animation: rotateNeg1 3s infinite 0.5s ease-in-out;
+    }
+
+    #leaf_3 {
+        animation: rotatePos1 2s infinite 0.8s ease-in-out;
+    }
+
+    #leaf_4 {
+        animation: rotatePos2 2s infinite 1.3s ease-in-out;
+    }
+
+    @keyframes rotateNeg2 {
+        0% {
+            transform: rotate(0deg) translateX(0%);
+        }
+        50% {
+            transform: rotate(-2deg) translateX(-2%);
+        }
+        100% {
+            transform: rotate(0deg) translateX(0%);
+        }
+    }
+
+    @keyframes rotatePos2 {
+        0% {
+            transform: rotate(0deg) translateX(0%);
+        }
+        50% {
+            transform: rotate(2deg) translateX(2%);
+        }
+        100% {
+            transform: rotate(0deg) translateX(0%);
+        }
+    }
+
+    @keyframes rotateNeg1 {
+        0% {
+            transform: rotate(0deg) translateX(0%);
+        }
+        50% {
+            transform: rotate(-1deg) translateX(-1%);
+        }
+        100% {
+            transform: rotate(0deg) translateX(0%);
+        }
+    }
+
+    @keyframes rotatePos1 {
+        0% {
+            transform: rotate(0deg) translateX(0%);
+        }
+        50% {
+            transform: rotate(1deg) translateX(1%);
+        }
+        100% {
+            transform: rotate(0deg) translateX(0%);
+        }
+    }
+</style>

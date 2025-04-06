@@ -1,45 +1,31 @@
 ---
-import { Image } from 'astro:assets';
-import workplace from '../assets/workplace_base.png';
-import plant_background from '../assets/pot_bg.png';
-import plant_foreground from '../assets/pot_fg.png';
-import leave_1 from '../assets/leave_1.png';
-import leave_2 from '../assets/leave_2.png';
-import leave_3 from '../assets/leave_3.png';
-import leave_4 from '../assets/leave_4.png';
+import { Picture } from 'astro:assets';
+import background from '../assets/cosy_workplace/background.png';
+import poster from '../assets/cosy_workplace/arcane_poster.png';
+import WobblingPlant from './WobblingPlant.astro';
 ---
 
-<div class="relative overflow-visible">
-    <Image class="max-h-[80dvh] w-auto" src={workplace} alt="Cosy workplace" id="workplace" />
-    <Image
-        class="absolute bottom-[3%] -left-[2%] z-10 w-[35%]"
-        src={plant_background}
-        alt="plant"
+<div class="md:h-[80dvh] w-full h-full relative overflow-visible">
+    <Picture
+        class="md:h-[80dvh] w-full h-full absolute bottom-0 left-0 -z-1"
+        src={poster}
+        alt="Arcane poster"
+        id="poster"
     />
-    <Image class="absolute bottom-[3%] -left-[2%] z-10 w-[35%]" src={leave_1} alt="plant" />
-    <Image class="absolute bottom-[3%] -left-[2%] z-10 w-[35%]" src={leave_2} alt="plant" />
-    <Image class="absolute bottom-[3%] -left-[2%] z-10 w-[35%]" src={leave_3} alt="plant" />
-    <Image class="absolute bottom-[3%] -left-[2%] z-10 w-[35%]" src={leave_4} alt="plant" />
-    <Image
-        class="absolute bottom-[3%] -left-[2%] z-10 w-[35%]"
-        src={plant_foreground}
-        alt="plant"
+    <Picture
+        class="md:h-[80dvh] w-full h-full block"
+        src={background}
+        alt="Cosy workplace"
+        id="background"
     />
+    <div class="absolute bottom-[3%] -left-[2%] z-10 w-full">
+        <WobblingPlant />
+    </div>
 </div>
 
 <style>
-    #workplace {
+    #background {
         object-fit: cover;
         border-radius: 230% 170% 160% 123% / 100% 100% 70% 50%;
-        /* animation: wobble 5s ease-in-out alternate infinite; */
-    }
-
-    @keyframes wobble {
-        0% {
-            border-radius: 230% 170% 160% 123% / 100% 100% 70% 50%;
-        }
-        100% {
-            border-radius: 230% 160% 80% 50% / 100% 100% 50% 30%;
-        }
     }
 </style>
