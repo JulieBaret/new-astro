@@ -1,5 +1,6 @@
 ---
 import InteractiveWorkplace from './InteractiveWorkplace.astro';
+import WobblingPlant from './WobblingPlant.astro';
 ---
 
 <section>
@@ -10,7 +11,12 @@ import InteractiveWorkplace from './InteractiveWorkplace.astro';
                 <h2>Frontend engineer</h2>
                 <p class="mt-2 text-gray-500">🚧​ Portfolio coming soon 🚧​</p>
             </div>
-            <InteractiveWorkplace />
+            <div class="relative min-h-[65vh] md:w-auto">
+                <InteractiveWorkplace />
+                <div class="absolute bottom-[3%] -left-[2%] z-100 w-full">
+                    <WobblingPlant />
+                </div>
+            </div>
         </div>
     </div>
 </section>

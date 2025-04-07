@@ -5,16 +5,15 @@ import arcane_poster from '../assets/cosy_workplace/arcane_poster.png';
 import fleabag_poster from '../assets/cosy_workplace/fleabag_poster.png';
 import shera_poster from '../assets/cosy_workplace/shera_poster.png';
 import reflect from '../assets/cosy_workplace/reflect.png';
-import WobblingPlant from './WobblingPlant.astro';
 
-const sharedClass = 'md:h-[80dvh] md:w-auto w-full h-full';
+const sharedClass = 'md:h-[80dvh] w-auto h-full';
 
 // Choose a random poster on each refresh
 const posters = [arcane_poster, fleabag_poster, shera_poster];
 const poster = posters[Math.floor(Math.random() * posters.length)];
 ---
 
-<div class={sharedClass} style={{ position: 'relative', overflow: 'visible' }}>
+<div class={sharedClass} style={{ position: 'relative', overflow: 'hidden' }}>
     <Picture
         class={sharedClass}
         style={{ position: 'absolute', bottom: 0, left: 0, zIndex: -1 }}
@@ -45,9 +44,6 @@ const poster = posters[Math.floor(Math.random() * posters.length)];
         src={background}
         alt="Cosy workplace"
     />
-    <div class="absolute bottom-[3%] -left-[2%] z-10 w-full">
-        <WobblingPlant />
-    </div>
 </div>
 
 <style>
