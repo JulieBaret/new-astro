@@ -33,13 +33,17 @@ const { title } = Astro.props;
         font-family: system-ui, sans-serif;
         background: #f4f1f9;
     }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
     body {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto 1fr auto;
         grid-template-areas: 'header' 'body' 'footer';
         min-height: 100dvh;
-        padding: 1rem;
         font-family: 'Plus Jakarta Sans Variable', sans-serif;
     }
 </style>
