@@ -11,36 +11,40 @@ const sharedClass = 'absolute bottom-0 left-0 w-[35%]';
 ---
 
 <div class="relative">
-    <Picture class={sharedClass} src={plant_bg} alt="plant pot" />
+    <Picture class={sharedClass} src={plant_bg} alt="plant pot" loading="eager" />
     <Picture
         class={sharedClass}
         src={leaf_1}
         alt="plant leaf"
         id="leaf_1"
-        style={`--deg: ${'-3deg'}; --tx: ${'-3%'}; animation: leafWobble 2s infinite ease-in-out;`}
+        style={`--deg: ${'-5deg'}; --tx: ${'-5%'}; animation: leafWobble 2s infinite ease-in-out;`}
+        loading="eager"
     />
     <Picture
         class={sharedClass}
         src={leaf_2}
         alt="plant leaf"
         id="leaf_2"
-        style={`--deg: ${'-1deg'}; --tx: ${'-1%'}; animation: leafWobble 3s infinite 0.5s ease-in-out;`}
+        style={`--deg: ${'-2deg'}; --tx: ${'-2%'}; animation: leafWobble 3s infinite 0.5s ease-in-out;`}
+        loading="eager"
     />
     <Picture
         class={sharedClass}
         src={leaf_3}
         alt="plant leaf"
         id="leaf_3"
-        style={`--deg: ${'1deg'}; --tx: ${'1%'}; animation: leafWobble 2s infinite 0.8s ease-in-out;`}
+        style={`--deg: ${'2deg'}; --tx: ${'2%'}; animation: leafWobble 2s infinite 0.8s ease-in-out;`}
+        loading="eager"
     />
     <Picture
         class={sharedClass}
         src={leaf_4}
         alt="plant leaf"
         id="leaf_4"
-        style={`--deg: ${'2deg'}; --tx: ${'2%'}; animation: leafWobble 2s infinite 1.3s ease-in-out;`}
+        style={`--deg: ${'4deg'}; --tx: ${'4%'}; animation: leafWobble 2s infinite 1.3s ease-in-out;`}
+        loading="eager"
     />
-    <Picture class={sharedClass} src={plant_fg} alt="plant pot" />
+    <Picture class={sharedClass} src={plant_fg} alt="plant pot" loading="eager" />
 </div>
 
 <style>
