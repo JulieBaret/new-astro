@@ -1,9 +1,17 @@
 @import 'tailwindcss';
 
 h1 {
-    @apply mb-3 text-4xl font-extrabold text-black md:text-5xl md:mb-4 2xl:text-6xl;
+    @apply text-4xl font-extrabold text-black md:text-5xl 2xl:text-6xl;
 }
 
 h2 {
     @apply text-2xl font-semibold text-gray-900 sm:text-3xl;
+}
+
+main {
+    @apply flex flex-col w-full mx-auto max-w-screen-lg;
+}
+
+section {
+    @apply w-full min-h-screen;
 }

@@ -2,20 +2,22 @@
 import InteractiveWorkplace from './InteractiveWorkplace.astro';
 ---
 
-<section class="w-full">
-    <div class="mx-auto max-w-screen-lg py-8">
-        <div class="flex flex-col md:flex-row items-center">
-            <div class="text-center max-w-80">
-                <h1>Julie Baret</h1>
-                <h2>Frontend engineer</h2>
-                <p class="md:mt-12 mt-2 text-gray-500">
-                    Getting a fresh new look – check out my previous portfolio <a
-                        href="https://juliebaret.vercel.app/"
-                        class="underline decoration-wavy decoration-1 underline-offset-2 font-bold"
-                        >here</a
-                    > in the meantime!
-                </p>
-            </div>
+<section class="overflow-hidden flex flex-col items-center md:justify-center">
+    <div class="flex flex-col mx-auto h-full md:flex-row mt-10 md:mt-0 space-between">
+        <div
+            class="text-center my-auto flex-1 flex flex-col gap-2 md:gap-4 mx-4 md:mx-0 md:max-w-80"
+        >
+            <h1>Julie Baret</h1>
+            <h2>Frontend engineer</h2>
+            <p class="text-gray-500">
+                Getting a fresh new look – check out my previous portfolio <a
+                    href="https://juliebaret.vercel.app/"
+                    class="underline decoration-wavy decoration-1 underline-offset-2 font-bold"
+                    >here</a
+                > in the meantime!
+            </p>
+        </div>
+        <div class="flex-shrink-0">
             <InteractiveWorkplace />
         </div>
     </div>
